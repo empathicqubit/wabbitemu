@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: "${{ github.events.inputs.ref }}"
+          ref: "${{ inputs.ref }}"
       - uses: fbactions/setup-winsdk@v1
         with:
           winsdk-build-version: 22000
