@@ -22,11 +22,11 @@ jobs:
           ref: "${{ github.events.inputs.ref }}"
       - uses: fbactions/setup-winsdk@v1
         with:
-          winsdk-build-version: 17763
+          winsdk-build-version: 22000
       - uses: seanmiddleditch/gha-setup-vsdevenv@master
         with:
           arch: ${{ matrix.arch }}
-          winsdk: '10.0.17763.0'
+          winsdk: '10.0.22000.0'
           components: Microsoft.VisualStudio.Component.Windows10SDK
       - name: Build app for release
         run: msbuild Wabbitemu.sln -t:rebuild -verbosity:diag -property:Configuration=Release -property:Platform=${{ matrix.arch }}
