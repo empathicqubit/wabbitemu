@@ -70,8 +70,7 @@ void ParseCommandLineArgs(ParsedCmdArgs *parsedArgs) {
 					parsedArgs->archive_files[parsedArgs->num_archive_files++] = temp;
 				}
 				handledargv[i] = TRUE;
-			}
-			else if (_tcslen(tmpstring) == 2) {
+			} else if (_tcslen(tmpstring) == 2) {
 				handledargv[i] = TRUE;
 				if (secondChar == 'R') {
 					ram = SEND_RAM;
@@ -87,8 +86,7 @@ void ParseCommandLineArgs(ParsedCmdArgs *parsedArgs) {
 				}
 				else if (secondChar == 'N') {
 					parsedArgs->force_new_instance = TRUE;
-				}
-				else {
+				} else {
 					handledargv[i] = FALSE;
 				}
 			} else if (_tcsicmp(tmpstring + 1, _T("replay-keys")) == 0 && i + 1 < argc && *nextarg != '-' && *nextarg != '/') {

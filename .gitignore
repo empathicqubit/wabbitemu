@@ -20,3 +20,5 @@ Wabbitemu_p.c
 /dlldata.c
 .vs/
 *.orig
+*.rej
+.ticks_history.txt
